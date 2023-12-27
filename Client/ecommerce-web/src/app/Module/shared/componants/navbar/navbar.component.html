@@ -1,0 +1,47 @@
+<div class="  fixed top-0 z-50 right-0 left-0 bg-[#69f0ae] text-gray-800 ">
+    <div class="px-5 lg:px-20 h-16 items-center justify-between">
+        <div class="flex items-center">
+            <div class="mr-5">
+                <img class="w-8"
+                    src="https://res.cloudinary.com/ddkso1wxi/image/upload/v1675919455/Logo/Copy_of_Zosh_Academy_nblljp.png"
+                    alt="Cloth Shopping Ecommerce-web" />
+            </div>
+            <div class="">
+                <div class="flex items.center space-x-4">
+                    <a routerLink="/" class="text-gray-800 font-semibold text-lg">Shop with Shubham</a>
+                    <div>
+                        <button class="open-button" mat-button (click)="openNavbarContent('men')">Men</button>
+                    </div>
+                    <div>
+                        <button class="open-button" mat-button (click)="openNavbarContent('women')">Women</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="flex items-center">
+                <button (click)="navigateTo('cart')" mat-icon-button>
+                    <mat-icon>shopping_cart</mat-icon>
+                </button>
+                <button *ngIf="false" mat-raised-button type="" color="accent">LogIn</button>
+                <div *ngIf="true" class="ml-3 flex items-center">
+                    <div class="flex items-center space-x-5">
+                        <span class="font-bold text-lg">Shubham</span>
+                        <button mat-button [matMenuTriggerFor]="profileMenu">
+                            <img class="relative h-5 w-5"
+                                src="https://cdn.pixabay.com/photo/2014/04/03/10/32/businessman-310819_640.png" alt="">
+                        </button>
+                        <mat-menu #profileMenu="matMenu">
+                            <button mat-menu-item>Orders</button>
+                            <button mat-menu-item>Profile</button>
+                            <button mat-menu-item>Logout</button>
+
+                        </mat-menu>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="isNavbarContentOpen" class="absolute right-0 left-0 model-container">
+        <app-nav-content [selectedSection]="currentSection" />
+    </div>
+</div>
