@@ -11,7 +11,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatRadioModule} from '@angular/material/radio';
 import { SharedModule } from '../shared/shared.module';
 import { CartComponent } from './componants/cart/cart.component';
@@ -23,6 +23,11 @@ import { OrdersComponent } from './componants/orders/orders.component';
 import { OrderDetailsComponent } from './componants/order-details/order-details.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ProductReviewCardComponent } from './componants/product-details/product-review-card/product-review-card.component';
+import { AddressFormComponent } from './componants/checkout/address-form/address-form.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { OrderCardComponent } from './componants/orders/order-card/order-card.component';
+
 @NgModule({
   declarations: [
     HomeComponent,
@@ -39,6 +44,8 @@ import { ProductReviewCardComponent } from './componants/product-details/product
     OrdersComponent,
     OrderDetailsComponent,
     ProductReviewCardComponent,
+    AddressFormComponent,
+    OrderCardComponent,
   
   ],
   imports: [
@@ -52,6 +59,11 @@ import { ProductReviewCardComponent } from './componants/product-details/product
     MatRadioModule,
     SharedModule,
     MatProgressBarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   exports:[
     HomeComponent,

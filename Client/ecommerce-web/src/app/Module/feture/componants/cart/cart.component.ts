@@ -8,22 +8,22 @@ import { Router } from '@angular/router';
 })
 export class CartComponent {
   products = [1, 1, 1, 1, , 1];
-  cart: any;
-  cartItems:any;
+  cart= [1,1,1]
+  cartItems: any;
 
   constructor(
     private router: Router,
-    private cartService: CartService,
-    private store: Store<AppState>
-  ) {}
+    // private cartService: CartService,
+    // private store: Store<AppState>
+  ) { }
 
   ngOnInit() {
-    this.cartService.getCart();
-  
+    // this.cartService.getCart();
 
-    this.store.pipe(select((store) => store.cart)).subscribe((cart) => {
-      this.cart = cart;
-    });
+
+    // this.store.pipe(select((store) => store.cart)).subscribe((cart) => {
+    //   this.cart = cart;
+    // });
   }
 
   navigateToCheckout = () => {
@@ -31,7 +31,7 @@ export class CartComponent {
   };
 
   removeCartItem = (cartItemId: Number) => {
-    this.cartService.removeCartItem(cartItemId);
+    // this.cartService.removeCartItem(cartItemId);
   };
 
 }

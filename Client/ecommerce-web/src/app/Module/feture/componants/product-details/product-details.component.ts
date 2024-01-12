@@ -31,6 +31,7 @@ export class ProductDetailsComponent {
   }
 
   handleAddToCart = () => {
+    this.router.navigate(['/cart'])
 
   };
 
