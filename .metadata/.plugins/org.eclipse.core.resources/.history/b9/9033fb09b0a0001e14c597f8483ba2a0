@@ -1,7 +1,0 @@
-package com.ecom.config;
-
-import org.springframework.web.filter.OncePerRequestFilter;
-
-public class JwtValidator extends OncePerRequestFilter{
-
-}

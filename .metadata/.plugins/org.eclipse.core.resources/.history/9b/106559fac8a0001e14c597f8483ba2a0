@@ -1,5 +1,0 @@
-package com.ecom.request;
-
-public class LoginRequest {
-
-}
